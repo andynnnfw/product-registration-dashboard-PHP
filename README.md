@@ -23,14 +23,4 @@ To run this project locally, you will need a local server environment such as:
 * [XAMPP](https://www.apachefriends.org/), WAMP, or MAMP.
 * A web browser.
 
-📁 php-product-dashboard/
-├── 📁 classe/
-│   ├── Imagem.class.php
-│   └── Produto.class.php
-├── 📁 css/
-│   └── style.css
-├── 📁 sql/
-│   └── loja.sql
-├── 📁 uploads/           # Uploaded images are saved here
-├── produtos.php          # Main dashboard interface
-└── README.md
+
