@@ -7,7 +7,7 @@ class Imagem {
     }
 
     public function conecta(){
-        $dns = "mysql:dbname=loja_etim;host=localhost";
+        $dns = "mysql:dbname=store;host=localhost";
         $user = "root";
         $pass = "";
 
@@ -17,7 +17,6 @@ class Imagem {
         } catch (\Throwable $th) {
             return false;
         }
-
     }
 
     public function enviaImagem($id_produto, $fotos){

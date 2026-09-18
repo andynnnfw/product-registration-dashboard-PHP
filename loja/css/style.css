@@ -132,6 +132,26 @@ input[type="file"]::file-selector-button:hover {
     transition: background-color 0.2s, transform 0.1s;
 }
 
+input[type="file"]::file-selector-products:hover {
+    background-color: #323238;
+    border-color: #9333ea;
+}
+
+#products {
+    margin-top: 32px;
+    background-color: #7e22ce;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    align-self: flex-end;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s, transform 0.1s;
+}
+
 #botao:hover {
     background-color: #9333ea;
 }

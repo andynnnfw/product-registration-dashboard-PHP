@@ -50,8 +50,17 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             <div id="preview-container"></div>
 
             <input type="submit" id= "botao" value="CADASTRAR" multiple>
+            <a href="produtoEstatico.php" class = "aaa"><input type="button" value="PRODUCTS" id="products"></a>
         </form>
+        
     </div>
+
+
+        
+
+
+
+
 
     <script>
     const inputFile = document.getElementById('foto-upload');

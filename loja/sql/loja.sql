@@ -1,14 +1,14 @@
-CREATE DATABASE IF NOT EXISTS loja_etim;
-USE loja_etim;
+CREATE DATABASE IF NOT EXISTS store;
+USE store;
 
-CREATE TABLE produto IF NOT EXISTS(
+CREATE TABLE IF NOT EXISTS produto(
     id_produto int AUTO_INCREMENT PRIMARY KEY,
     nome_produto varchar(100),
     descricao text,
     valor double
 );
 
-CREATE TABLE imagem IF NOT EXISTS(
+CREATE TABLE IF NOT EXISTS imagem(
     id_imagem int AUTO_INCREMENT PRIMARY KEY,
     nome_img varchar(100), 
     fk_id_produto int,
