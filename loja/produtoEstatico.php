@@ -8,7 +8,6 @@
     <title>products </title>
 </head>
 <body>
-    
     <section>
         <img src="uploads/6aad9bc460987_bob.png" alt="carai">
         <img src="uploads/6aa0de95a6a87_images (1).jfif" alt="">
