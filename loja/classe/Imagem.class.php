@@ -52,6 +52,15 @@ class Imagem {
         return $sql->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function mostrarTodasImagens(){
+        $sql = "SELECT i.id_imagem, i.nome_img, p.nome_produto FROM imagem i
+                LEFT JOIN produto p ON p.id_produto = i.fk_id_produto ORDER BY i.id_imagem DESC";
+         $sql = $this->pdo->prepare($sql);
+         $sql->execute();
+         
+         return $sql->fetchAll(PDO::FETCH_ASSOC);
+    }
+
     public function apagaImagem($id_imagem, $pastaDestino = "uploads/"){
         $sql = $this->pdo->prepare("SELECT nome_img FROM imagem WHERE id_imagem = :id");
         $sql->bindValue(":id", $id_imagem);
@@ -67,5 +76,6 @@ class Imagem {
         $del->bindValue(":id", $id_imagem);
         return $del->execute();
     }
+
 }
 ?>

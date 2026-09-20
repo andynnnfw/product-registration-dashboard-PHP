@@ -1,3 +1,14 @@
+<?php
+require 'classe/Imagem.class.php';
+
+$img = new Imagem();
+$imagens = [];
+
+if ($img->conecta()){
+    $imagens = $img->mostrarTodasImagens();
+}
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,9 +20,15 @@
 </head>
 <body>
     <section>
-        <img src="uploads/6aad9bc460987_bob.png" alt="carai">
-        <img src="uploads/6aa0de95a6a87_images (1).jfif" alt="">
-        <img src="uploads/6aada351c4d3f_robin2.png" alt="">
+        <?php if(empty($imagens)) : ?>
+            <p>Nenhuma imagem cadastrada ainda.</p>
+
+        <?php  else: ?>
+            <?php foreach ($imagens as $imagem) : ?>
+                <img src="uploads/<?=  rawurldecode($imagem['nome_img']) ?>" alt="<?= htmlspecialchars($imagem['nome_produto'] ?? 'Produto') ?>">
+            <?php endforeach ; ?>
+        <?php endif ; ?>
+        
     </section>
 </body>
 </html>
