@@ -22,10 +22,15 @@ if ($img->conecta()){
     <section>
         <?php if(empty($imagens)) : ?>
             <p>Nenhuma imagem cadastrada ainda.</p>
-
         <?php  else: ?>
             <?php foreach ($imagens as $imagem) : ?>
-                <img src="uploads/<?=  rawurldecode($imagem['nome_img']) ?>" alt="<?= htmlspecialchars($imagem['nome_produto'] ?? 'Produto') ?>">
+                <div class="produto-card">
+                    <img src="uploads/<?= rawurldecode($imagem['nome_img']) ?>" alt="<?= htmlspecialchars($imagem['nome_produto'] ?? 'Produto') ?>">
+                    
+                    <h2 style="color: white;"><?= htmlspecialchars($imagem['nome_produto'] ?? 'Produto sem nome') ?></h2>
+                    <p style="color: white;"><strong>Preço:</strong> R$ <?= number_format((float)($imagem['valor'] ?? 0), 2, ',', '.') ?></p>
+                    <p style="color: white;"><strong>Descrição:</strong> <?= htmlspecialchars($imagem['descricao'] ?? 'Sem descrição informada.') ?></p>
+                </div>
             <?php endforeach ; ?>
         <?php endif ; ?>
         

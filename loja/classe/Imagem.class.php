@@ -53,7 +53,7 @@ class Imagem {
     }
 
     public function mostrarTodasImagens(){
-        $sql = "SELECT i.id_imagem, i.nome_img, p.nome_produto FROM imagem i
+        $sql = "SELECT i.id_imagem, i.nome_img, p.nome_produto, p.valor, p.descricao FROM imagem i
                 LEFT JOIN produto p ON p.id_produto = i.fk_id_produto ORDER BY i.id_imagem DESC";
          $sql = $this->pdo->prepare($sql);
          $sql->execute();
